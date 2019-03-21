@@ -70,7 +70,7 @@
     </bean>
 
     <bean name="To-the-moon" class="Trip">
-        <property name="where" value="To the moon"/>
+        <property name="finalDestination" value="To the moon"/>
         <property name="distance" value="1200"/>
     </bean>
 </beans>

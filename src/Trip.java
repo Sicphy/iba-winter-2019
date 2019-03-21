@@ -1,13 +1,13 @@
 public class Trip {
-    private String where;
+    private String  finalDestination;
     private Integer distance;
 
-    public String getWhere() {
-        return where;
+    public String getFinalDestination() {
+        return finalDestination;
     }
 
-    public void setWhere(String where) {
-        this.where = where;
+    public void setFinalDestination(String finalDestination) {
+        this.finalDestination = finalDestination;
     }
 
     public Integer getDistance() {
@@ -21,7 +21,7 @@ public class Trip {
     @Override
     public String toString() {
         return "Trip{" +
-                "where='" + where + '\'' +
+                "finalDestination='" + finalDestination + '\'' +
                 ", distance=" + distance +
                 '}';
     }
