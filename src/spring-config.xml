@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="astronautList" list-class="java.util.ArrayList" value-type="Astronaut">
+        <bean name="Misha" class="Astronaut">
+            <property name="name" value="Misha"/>
+            <property name="age" value="10"/>
+            <property name="post" value="captain"/>
+        </bean>
+        <bean name="Grisha" class="Astronaut">
+            <property name="name" value="Grisha"/>
+            <property name="age" value="9"/>
+            <property name="post" value="assistant"/>
+        </bean>
+        <bean name="Dasha" class="Astronaut">
+            <property name="name" value="Dasha"/>
+            <property name="age" value="8"/>
+            <property name="post" value="A woman"/>
+        </bean>
+        <bean name="Vanya" class="Astronaut">
+            <property name="name" value="Vanya"/>
+            <property name="age" value="12"/>
+            <property name="post" value="captain"/>
+        </bean>
+        <bean name="Nastya" class="Astronaut">
+            <property name="name" value="Nastya"/>
+            <property name="age" value="13"/>
+            <property name="post" value="cook"/>
+        </bean>
+        <bean name="Kirill" class="Astronaut">
+            <property name="name" value="Kirill"/>
+            <property name="age" value="6"/>
+            <property name="post" value="assistant"/>
+        </bean>
+        <bean name="Nina" class="Astronaut">
+            <property name="name" value="Nina"/>
+            <property name="age" value="14"/>
+            <property name="post" value="A woman"/>
+        </bean>
+        <bean name="Gena" class="Astronaut">
+            <property name="name" value="Gena"/>
+            <property name="age" value="17"/>
+            <property name="post" value="cook"/>
+        </bean>
+    </util:list>
+
+    <util:list id="shuttleList" list-class="java.util.ArrayList" value-type="Shuttle">
+        <bean name="victory" class="Shuttle">
+            <property name="capaciousness" value="4"/>
+            <property name="name" value="victory"/>
+        </bean>
+        <bean name="trouble" class="Shuttle">
+            <property name="name" value="trouble"/>
+            <property name="capaciousness" value="4"/>
+        </bean>
+        <bean name="titanic" class="Shuttle">
+            <property name="name" value="titanic"/>
+            <property name="capaciousness" value="4"/>
+        </bean>
+    </util:list>
+
+    <bean name="shuttles" class="Shuttles">
+        <property name="shuttleList" ref="shuttleList"/>
+    </bean>
+
+    <bean name="astronauts" class="Astronauts">
+        <property name="astronautList" ref="astronautList"/>
+    </bean>
+
+    <bean name="To-the-moon" class="Trip">
+        <property name="where" value="To the moon"/>
+        <property name="distance" value="1200"/>
+    </bean>
+</beans>
