@@ -25,7 +25,6 @@ public class StudentApi {
         studentService.setNewStudent(student);
     }
 
-
     @GetMapping("/greeting/{myVariable}")
     private String greeting(@PathVariable String myVariable) {
         return "Hello s" + myVariable;
