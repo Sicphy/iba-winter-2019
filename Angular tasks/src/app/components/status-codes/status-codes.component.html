@@ -1,0 +1,8 @@
+<mat-form-field>
+<input matInput [(ngModel)]="filter" placeholder="Filter">
+</mat-form-field>
+<div *ngFor="let statusCode of statusCodes| search:filter">
+  <div (click)="sampleClick(statusCode)">{{ statusCode.code }}</div>
+</div>
+<app-status-code (onChanged)="onChanged($event)" [statusCode]="childStatusCode"></app-status-code>
+<div>{{ description }}</div>
